@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mymobility_flutter/config/app_router.dart';
+import 'package:mymobility_flutter/navigation/navigation.dart';
+import 'package:mymobility_flutter/theme.dart';
 
 void main() => runApp(const MyMobility());
 
@@ -9,12 +9,11 @@ class MyMobility extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routerConfig: router,
-      theme: ThemeData.dark().copyWith(
-        textTheme: GoogleFonts.poppinsTextTheme(),
-      ),
+      theme: lightThemeData(context),
+      darkTheme: darkThemeData(context),
+      home: const NavigationPage(),
     );
   }
 }
