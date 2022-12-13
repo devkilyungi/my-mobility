@@ -16,7 +16,9 @@ class _MapScreenState extends State<MapScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.info_outline),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/more_info');
+            },
           )
         ],
       ),
