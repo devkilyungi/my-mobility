@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mymobility_flutter/constants.dart';
 import 'package:mymobility_flutter/components/reusable_card.dart';
+import 'package:mymobility_flutter/screens/home_page.dart';
 
 class BookmarksScreen extends StatelessWidget {
   const BookmarksScreen({Key? key}) : super(key: key);
@@ -30,15 +31,15 @@ class BookmarksScreen extends StatelessWidget {
         margin: const EdgeInsets.only(top: 9.0),
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: ListView.builder(
-            itemCount: 4,
+            itemCount: 8,
             itemBuilder: (context, index) {
               return ReusableCard(
                   cardChild: Row(
                     children: [
                       const Expanded(
                         child: CircleAvatar(
-                          backgroundImage: AssetImage('default_location.png'),
-                          minRadius: 25.0,
+                          backgroundImage: NetworkImage(dummyUrl),
+                          minRadius: 28.0,
                         ),
                       ),
                       Expanded(

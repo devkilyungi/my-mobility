@@ -4,7 +4,7 @@ const Color kLightGreen = Color(0xFF84A98C);
 const Color kMediumGreen = Color(0xFF52796F);
 const Color kDarkGreen = Color(0xFF354F52);
 
-const Color kCardBackgroundColor = Color(0xFFbbd0ff);
+const Color kCardBackgroundColor = Color(0xFFf5ebe0);
 const Color kBackgroundColor = Color(0xFFDADADA);
 const Color kPrimaryColor = Color(0xFF33415C);
 const Color kSecondaryColor = Color(0xFF50514F);
@@ -22,11 +22,17 @@ const kTitleLabelStyle = TextStyle(
 
 const kPlaceNameStyle = TextStyle(
   fontSize: 16.0,
+  color: Color(0xFF50514F),
+  letterSpacing: 1.2,
   fontWeight: FontWeight.bold,
 );
 
 const kDescriptionStyle = TextStyle(
   fontSize: 12.0,
   color: Color(0xFF50514F),
+  letterSpacing: 1,
   fontWeight: FontWeight.bold,
 );
+
+const String dummyUrl =
+    'https://images.unsplash.com/photo-1610925877801-8e3b91ddda41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80';

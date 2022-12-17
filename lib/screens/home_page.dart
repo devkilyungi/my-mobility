@@ -70,6 +70,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
                 'Suggestions',
                 style: kTitleLabelStyle,
               ),
+              const SizedBox(height: 10),
               Expanded(
                 child: ListView.builder(
                     itemCount: 3,
@@ -79,9 +80,8 @@ class _HomepageScreenState extends State<HomepageScreen> {
                             children: [
                               const Expanded(
                                 child: CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('default_location.png'),
-                                  minRadius: 25.0,
+                                  backgroundImage: NetworkImage(dummyUrl),
+                                  minRadius: 28.0,
                                 ),
                               ),
                               Expanded(
