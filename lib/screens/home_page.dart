@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mymobility_flutter/components/reusable_card.dart';
+import 'package:mymobility_flutter/constants.dart';
 
 import '../components/custom_search_delegate.dart';
 
@@ -43,8 +45,9 @@ class _HomepageScreenState extends State<HomepageScreen> {
           ],
         ),
         body: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(kDefaultPadding),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 margin: const EdgeInsets.only(bottom: 15.0),
@@ -63,8 +66,123 @@ class _HomepageScreenState extends State<HomepageScreen> {
                   ),
                 ),
               ),
-              const Text('Suggestions'),
-              const Expanded(child: Center()),
+              const Text(
+                'Suggestions',
+                style: kTitleLabelStyle,
+              ),
+              Expanded(
+                  child: Column(
+                children: [
+                  ReusableCard(
+                      colour: kContentColorDarkTheme,
+                      cardChild: Row(
+                        children: [
+                          const Expanded(
+                            child: CircleAvatar(
+                              backgroundImage:
+                                  AssetImage('default_location.png'),
+                              minRadius: 25.0,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Place Name',
+                                  style: kPlaceNameStyle,
+                                ),
+                                Text(
+                                  'Description',
+                                  style: kDescriptionStyle,
+                                ),
+                              ],
+                            ),
+                          ),
+                          const Expanded(
+                            child: Text(
+                              '2Km away',
+                              style: kDescriptionStyle,
+                            ),
+                          ),
+                        ],
+                      ),
+                      onPress: () {}),
+                  ReusableCard(
+                      colour: kContentColorDarkTheme,
+                      cardChild: Row(
+                        children: [
+                          const Expanded(
+                            child: CircleAvatar(
+                              backgroundImage:
+                                  AssetImage('default_location.png'),
+                              minRadius: 25.0,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Place Name',
+                                  style: kPlaceNameStyle,
+                                ),
+                                Text(
+                                  'Description',
+                                  style: kDescriptionStyle,
+                                ),
+                              ],
+                            ),
+                          ),
+                          const Expanded(
+                            child: Text(
+                              '2Km away',
+                              style: kDescriptionStyle,
+                            ),
+                          ),
+                        ],
+                      ),
+                      onPress: () {}),
+                  ReusableCard(
+                      colour: kContentColorDarkTheme,
+                      cardChild: Row(
+                        children: [
+                          const Expanded(
+                            child: CircleAvatar(
+                              backgroundImage:
+                                  AssetImage('default_location.png'),
+                              minRadius: 25.0,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Place Name',
+                                  style: kPlaceNameStyle,
+                                ),
+                                Text(
+                                  'Description',
+                                  style: kDescriptionStyle,
+                                ),
+                              ],
+                            ),
+                          ),
+                          const Expanded(
+                            child: Text(
+                              '2Km away',
+                              style: kDescriptionStyle,
+                            ),
+                          ),
+                        ],
+                      ),
+                      onPress: () {}),
+                ],
+              )),
             ],
           ),
         ),

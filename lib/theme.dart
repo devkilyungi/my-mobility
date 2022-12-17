@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
     primaryColor: kPrimaryColor,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: kBackgroundColor,
     appBarTheme: appBarTheme,
     iconTheme: const IconThemeData(color: kContentColorLightTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
@@ -21,12 +21,12 @@ ThemeData lightThemeData(BuildContext context) {
           borderRadius: BorderRadius.circular(25.0), color: kPrimaryColor),
       labelColor: kContentColorDarkTheme,
       labelStyle: const TextStyle(color: kContentColorLightTheme),
-      unselectedLabelColor: kContentColorLightTheme.withOpacity(0.32),
+      unselectedLabelColor: kContentColorLightTheme.withOpacity(0.6),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: Colors.white,
-      selectedItemColor: kContentColorLightTheme.withOpacity(0.7),
-      unselectedItemColor: kContentColorLightTheme.withOpacity(0.32),
+      backgroundColor: kBackgroundColor,
+      selectedItemColor: kContentColorLightTheme.withOpacity(0.9),
+      unselectedItemColor: kContentColorLightTheme.withOpacity(0.6),
       selectedIconTheme: const IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
