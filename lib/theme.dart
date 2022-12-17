@@ -25,7 +25,6 @@ ThemeData lightThemeData(BuildContext context) {
           const TextStyle(
             fontSize: 16.0,
             fontWeight: FontWeight.bold,
-            color: kContentColorDarkTheme,
           ),
         ),
         padding: MaterialStateProperty.all(
@@ -77,7 +76,6 @@ ThemeData darkThemeData(BuildContext context) {
           const TextStyle(
             fontSize: 16.0,
             fontWeight: FontWeight.bold,
-            color: kContentColorDarkTheme,
           ),
         ),
         padding: MaterialStateProperty.all(
