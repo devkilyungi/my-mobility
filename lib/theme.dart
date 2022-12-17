@@ -16,6 +16,23 @@ ThemeData lightThemeData(BuildContext context) {
       secondary: kSecondaryColor,
       error: kErrorColor,
     ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.resolveWith((states) {
+          return kPrimaryColor;
+        }),
+        textStyle: MaterialStateProperty.all(
+          const TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
+            color: kContentColorDarkTheme,
+          ),
+        ),
+        padding: MaterialStateProperty.all(
+          const EdgeInsets.symmetric(horizontal: 60.0, vertical: 10.0),
+        ),
+      ),
+    ),
     tabBarTheme: TabBarTheme(
       indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(25.0), color: kPrimaryColor),
@@ -50,6 +67,23 @@ ThemeData darkThemeData(BuildContext context) {
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.resolveWith((states) {
+          return kPrimaryColor;
+        }),
+        textStyle: MaterialStateProperty.all(
+          const TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
+            color: kContentColorDarkTheme,
+          ),
+        ),
+        padding: MaterialStateProperty.all(
+          const EdgeInsets.symmetric(horizontal: 60.0, vertical: 10.0),
+        ),
+      ),
     ),
     tabBarTheme: TabBarTheme(
       indicator: BoxDecoration(
