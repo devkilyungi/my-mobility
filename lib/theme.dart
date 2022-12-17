@@ -16,6 +16,13 @@ ThemeData lightThemeData(BuildContext context) {
       secondary: kSecondaryColor,
       error: kErrorColor,
     ),
+    tabBarTheme: TabBarTheme(
+      indicator: BoxDecoration(
+          borderRadius: BorderRadius.circular(25.0), color: kPrimaryColor),
+      labelColor: kContentColorDarkTheme,
+      labelStyle: const TextStyle(color: kContentColorLightTheme),
+      unselectedLabelColor: kContentColorLightTheme.withOpacity(0.32),
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: Colors.white,
       selectedItemColor: kContentColorLightTheme.withOpacity(0.7),
@@ -43,6 +50,13 @@ ThemeData darkThemeData(BuildContext context) {
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor,
+    ),
+    tabBarTheme: TabBarTheme(
+      indicator: BoxDecoration(
+          borderRadius: BorderRadius.circular(25.0), color: kPrimaryColor),
+      labelColor: kContentColorDarkTheme,
+      labelStyle: const TextStyle(color: kContentColorLightTheme),
+      unselectedLabelColor: kContentColorDarkTheme.withOpacity(0.32),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: kContentColorLightTheme,
