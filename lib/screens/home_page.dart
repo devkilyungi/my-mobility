@@ -71,118 +71,47 @@ class _HomepageScreenState extends State<HomepageScreen> {
                 style: kTitleLabelStyle,
               ),
               Expanded(
-                  child: Column(
-                children: [
-                  ReusableCard(
-                      colour: kContentColorDarkTheme,
-                      cardChild: Row(
-                        children: [
-                          const Expanded(
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('default_location.png'),
-                              minRadius: 25.0,
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'Place Name',
-                                  style: kPlaceNameStyle,
+                child: ListView.builder(
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return ReusableCard(
+                          colour: kContentColorDarkTheme,
+                          cardChild: Row(
+                            children: [
+                              const Expanded(
+                                child: CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('default_location.png'),
+                                  minRadius: 25.0,
                                 ),
-                                Text(
-                                  'Description',
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      'Place Name',
+                                      style: kPlaceNameStyle,
+                                    ),
+                                    Text(
+                                      'Description',
+                                      style: kDescriptionStyle,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const Expanded(
+                                child: Text(
+                                  '2Km away',
                                   style: kDescriptionStyle,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                          const Expanded(
-                            child: Text(
-                              '2Km away',
-                              style: kDescriptionStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                      onPress: () {}),
-                  ReusableCard(
-                      colour: kContentColorDarkTheme,
-                      cardChild: Row(
-                        children: [
-                          const Expanded(
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('default_location.png'),
-                              minRadius: 25.0,
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'Place Name',
-                                  style: kPlaceNameStyle,
-                                ),
-                                Text(
-                                  'Description',
-                                  style: kDescriptionStyle,
-                                ),
-                              ],
-                            ),
-                          ),
-                          const Expanded(
-                            child: Text(
-                              '2Km away',
-                              style: kDescriptionStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                      onPress: () {}),
-                  ReusableCard(
-                      colour: kContentColorDarkTheme,
-                      cardChild: Row(
-                        children: [
-                          const Expanded(
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('default_location.png'),
-                              minRadius: 25.0,
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'Place Name',
-                                  style: kPlaceNameStyle,
-                                ),
-                                Text(
-                                  'Description',
-                                  style: kDescriptionStyle,
-                                ),
-                              ],
-                            ),
-                          ),
-                          const Expanded(
-                            child: Text(
-                              '2Km away',
-                              style: kDescriptionStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                      onPress: () {}),
-                ],
-              )),
+                          onPress: () {});
+                    }),
+              ),
             ],
           ),
         ),

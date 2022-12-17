@@ -16,7 +16,7 @@ class ReusableCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
-        margin: const EdgeInsets.all(15.0),
+        margin: const EdgeInsets.symmetric(vertical: 9.0),
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 18.0),
         decoration: BoxDecoration(
           color: colour,
