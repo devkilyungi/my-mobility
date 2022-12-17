@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mymobility_flutter/navigation/navigation.dart';
 import 'package:mymobility_flutter/screens/more_info_screen.dart';
+import 'package:mymobility_flutter/screens/settings.dart';
 import 'package:mymobility_flutter/theme.dart';
 import 'package:go_router/go_router.dart';
 
@@ -20,7 +21,13 @@ final _router = GoRouter(
                 return MoreInfo(
                   info: state.params['info']!,
                 );
-              })
+              }),
+          GoRoute(
+              path: 'settings',
+              name: 'settings',
+              builder: (context, state) {
+                return const SettingsPage();
+              }),
         ]),
   ],
 );

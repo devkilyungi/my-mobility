@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mymobility_flutter/constants.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -12,7 +13,9 @@ class ProfileScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.settings_outlined),
-            onPressed: () {},
+            onPressed: () {
+              context.goNamed('settings');
+            },
           )
         ],
       ),
