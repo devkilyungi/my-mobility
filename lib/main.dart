@@ -14,9 +14,9 @@ class MyMobility extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      home: const NavigationPage(),
       initialRoute: '/',
       routes: {
+        '/': (context) => const NavigationPage(),
         '/more_info': (context) => const MoreInfo(
               info: 'This is a sample text for the info screen',
             ),

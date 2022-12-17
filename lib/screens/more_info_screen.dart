@@ -7,6 +7,14 @@ class MoreInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('More Info'),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_sharp)),
+      ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
         child: Text(info),
