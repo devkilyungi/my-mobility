@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const Color kLightGreen = Color(0xFF84A98C);
 const Color kMediumGreen = Color(0xFF52796F);
 const Color kDarkGreen = Color(0xFF354F52);
+const Color kCardBackgroundColor = Color(0xFFE9EDC9);
 
 const Color kBackgroundColor = Color(0xFFDADADA);
 const Color kPrimaryColor = Color(0xFF33415C);

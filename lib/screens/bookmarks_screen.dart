@@ -33,7 +33,6 @@ class BookmarksScreen extends StatelessWidget {
             itemCount: 4,
             itemBuilder: (context, index) {
               return ReusableCard(
-                  colour: kContentColorDarkTheme,
                   cardChild: Row(
                     children: [
                       const Expanded(

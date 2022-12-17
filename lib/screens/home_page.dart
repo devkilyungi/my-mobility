@@ -75,7 +75,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
                     itemCount: 3,
                     itemBuilder: (context, index) {
                       return ReusableCard(
-                          colour: kContentColorDarkTheme,
                           cardChild: Row(
                             children: [
                               const Expanded(
