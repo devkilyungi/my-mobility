@@ -1,5 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_search_delegate.dart';
+
+final now = DateTime.now();
+
+String determineGreeting() {
+  if (now.hour < 12) {
+    return 'Good Morning';
+  } else if (now.hour < 18) {
+    return 'Good Afternoon';
+  } else {
+    return 'Good Evening';
+  }
+}
+
 class HomepageScreen extends StatefulWidget {
   const HomepageScreen({Key? key}) : super(key: key);
 
@@ -12,9 +26,19 @@ class _HomepageScreenState extends State<HomepageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //todo: add an if selection to determine time of day and add appropriate text to title of screen
-        //todo: also check whether it is better to have it in the appbar or as a piece of text at the top of the page
-        title: const Text('Good Morning'),
+        title: Text(determineGreeting()),
+        actions: [
+          IconButton(
+            onPressed: () {
+              // method to show the search bar
+              showSearch(
+                  context: context,
+                  // delegate to customize the search bar
+                  delegate: CustomSearchDelegate());
+            },
+            icon: const Icon(Icons.search),
+          )
+        ],
       ),
     );
   }
