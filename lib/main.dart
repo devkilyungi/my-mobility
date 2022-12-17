@@ -2,6 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:mymobility_flutter/navigation/navigation.dart';
 import 'package:mymobility_flutter/screens/more_info_screen.dart';
 import 'package:mymobility_flutter/theme.dart';
+import 'package:go_router/go_router.dart';
+
+// GoRouter configuration
+final _router = GoRouter(
+  initialLocation: '/',
+  routes: [
+    GoRoute(
+        path: '/',
+        name: 'home',
+        builder: (context, state) => const NavigationPage(),
+        routes: [
+          GoRoute(
+              path: 'more_info/:info',
+              name: 'more_info',
+              builder: (context, state) {
+                return MoreInfo(
+                  info: state.params['info']!,
+                );
+              })
+        ]),
+  ],
+);
 
 void main() => runApp(const MyMobility());
 
@@ -10,17 +32,11 @@ class MyMobility extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const NavigationPage(),
-        '/more_info': (context) => const MoreInfo(
-              info: 'This is a sample text for the info screen',
-            ),
-      },
+      routerConfig: _router,
     );
   }
 }

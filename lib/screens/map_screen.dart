@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({Key? key}) : super(key: key);
@@ -17,7 +18,12 @@ class _MapScreenState extends State<MapScreen> {
           IconButton(
             icon: const Icon(Icons.info_outline),
             onPressed: () {
-              Navigator.pushNamed(context, '/more_info');
+              context.goNamed(
+                'more_info',
+                params: {
+                  'info': 'This is some sample information for the map screen',
+                },
+              );
             },
           )
         ],

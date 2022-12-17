@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MoreInfo extends StatelessWidget {
   final String info;
@@ -11,7 +12,7 @@ class MoreInfo extends StatelessWidget {
         title: const Text('More Info'),
         leading: IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              context.pop();
             },
             icon: const Icon(Icons.arrow_back_sharp)),
       ),

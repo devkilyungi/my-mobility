@@ -37,6 +37,9 @@ dependencies:
   # This package contains pre-canned animations for commonly-desired effects
   animations: ^2.0.0
 
+  # go_router package handles navigation in the app
+  go_router: ^5.2.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

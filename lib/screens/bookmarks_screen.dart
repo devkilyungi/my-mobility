@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BookmarksScreen extends StatelessWidget {
   const BookmarksScreen({Key? key}) : super(key: key);
@@ -12,7 +13,13 @@ class BookmarksScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.info_outline),
             onPressed: () {
-              Navigator.pushNamed(context, '/more_info');
+              context.goNamed(
+                'more_info',
+                params: {
+                  'info':
+                      'This is some sample information for the bookmarks screen',
+                },
+              );
             },
           )
         ],
