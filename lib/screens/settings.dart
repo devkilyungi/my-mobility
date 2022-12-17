@@ -25,9 +25,9 @@ class SettingsPage extends StatelessWidget {
             Expanded(
               child: Column(
                 children: [
-                  Text('ACCOUNT SETTINGS'),
+                  const Text('ACCOUNT SETTINGS'),
                   ListTile(
-                    title: Text(
+                    title: const Text(
                       'Notifications',
                       style: kPlaceNameStyle,
                     ),

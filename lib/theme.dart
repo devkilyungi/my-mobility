@@ -105,11 +105,10 @@ const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
 
 final inputDecorationTheme = InputDecorationTheme(
   filled: true,
-  fillColor: kContentColorDarkTheme.withOpacity(0.08),
+  fillColor: kContentColorDarkTheme.withOpacity(0.5),
   contentPadding: const EdgeInsets.symmetric(
-      horizontal: kDefaultPadding * 1.5, vertical: kDefaultPadding),
+      horizontal: kDefaultPadding * 1.2, vertical: kDefaultPadding),
   border: const OutlineInputBorder(
-    borderSide: BorderSide.none,
-    borderRadius: BorderRadius.all(Radius.circular(50)),
+    borderRadius: BorderRadius.all(Radius.circular(20)),
   ),
 );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mymobility_flutter/navigation/navigation.dart';
+import 'package:mymobility_flutter/screens/edit_profile_screen.dart';
 import 'package:mymobility_flutter/screens/more_info_screen.dart';
 import 'package:mymobility_flutter/screens/settings.dart';
 import 'package:mymobility_flutter/theme.dart';
@@ -27,6 +28,12 @@ final _router = GoRouter(
               name: 'settings',
               builder: (context, state) {
                 return const SettingsPage();
+              }),
+          GoRoute(
+              path: 'edit_profile',
+              name: 'edit_profile',
+              builder: (context, state) {
+                return const EditProfilePage();
               }),
         ]),
   ],
