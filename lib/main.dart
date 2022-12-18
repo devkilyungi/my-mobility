@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mymobility_flutter/navigation/navigation.dart';
 import 'package:mymobility_flutter/screens/edit_profile_screen.dart';
 import 'package:mymobility_flutter/screens/more_info_screen.dart';
@@ -47,7 +48,7 @@ final _router = GoRouter(
   ],
 );
 
-void main() => runApp(const MyMobility());
+void main() => runApp(const ProviderScope(child: MyMobility()));
 
 class MyMobility extends StatelessWidget {
   const MyMobility({Key? key}) : super(key: key);

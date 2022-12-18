@@ -34,14 +34,19 @@ dependencies:
   # allows us to easily use any of the 977 fonts from fonts.google.com
   google_fonts: ^2.0.0
 
-  # This package contains pre-canned animations for commonly-desired effects
+  # This packages contain pre-canned animations for commonly-desired effects
   animations: ^2.0.0
+  lottie: ^2.1.0
 
   # go_router package handles navigation in the app
   go_router: ^5.2.4
 
   # google maps package for maps widget
   google_maps_flutter: ^2.2.2
+
+  fab_circular_menu: ^1.0.2
+  flutter_riverpod: ^2.1.1
+  flutter_polyline_points: ^1.0.0
 
 dev_dependencies:
   flutter_test:

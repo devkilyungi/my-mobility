@@ -43,9 +43,9 @@ class SettingsPage extends StatelessWidget {
               flex: 2,
               child: Column(
                 children: [
-                  Text('LEGAL'),
+                  const Text('LEGAL'),
                   ListTile(
-                    title: Text(
+                    title: const Text(
                       'Terms of Service',
                       style: kPlaceNameStyle,
                     ),

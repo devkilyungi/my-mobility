@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mymobility_flutter/main.dart';
-import 'package:mymobility_flutter/navigation/navigation.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,12 +19,25 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: const Color(0xff303d44),
       body: Center(
-        child: SizedBox(
-          height: 200.0,
-          width: 200.0,
-          child: Text('Splash Screen'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 300.0,
+              width: 300.0,
+              child: Image(
+                image: AssetImage('assets/images/final_logo.png'),
+              ),
+            ),
+            SizedBox(
+              height: 200.0,
+              width: 200.0,
+              child: LottieBuilder.asset('assets/images/circle_loader.json'),
+            ),
+          ],
         ),
       ),
     );
