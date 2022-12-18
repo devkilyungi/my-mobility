@@ -3,6 +3,7 @@ import 'package:mymobility_flutter/navigation/navigation.dart';
 import 'package:mymobility_flutter/screens/edit_profile_screen.dart';
 import 'package:mymobility_flutter/screens/more_info_screen.dart';
 import 'package:mymobility_flutter/screens/settings.dart';
+import 'package:mymobility_flutter/screens/splash_screen.dart';
 import 'package:mymobility_flutter/theme.dart';
 import 'package:go_router/go_router.dart';
 
@@ -11,9 +12,16 @@ final _router = GoRouter(
   initialLocation: '/',
   routes: [
     GoRoute(
-        path: '/',
+      path: '/',
+      name: 'splash_screen',
+      builder: (context, state) => const SplashScreen(),
+    ),
+    GoRoute(
+        path: '/home',
         name: 'home',
-        builder: (context, state) => const NavigationPage(),
+        builder: (context, state) {
+          return const NavigationPage();
+        },
         routes: [
           GoRoute(
               path: 'more_info/:info',
