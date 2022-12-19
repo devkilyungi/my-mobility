@@ -49,6 +49,8 @@ dependencies:
   flutter_polyline_points: ^1.0.0
   flutter_rating_stars: ^1.0.3+4
   flip_card: ^0.6.0
+  geolocator: ^9.0.2
+  geocoding: ^2.0.5
 
 dev_dependencies:
   flutter_test:

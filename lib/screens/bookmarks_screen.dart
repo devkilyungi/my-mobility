@@ -11,26 +11,12 @@ class BookmarksScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Bookmarks"),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.info_outline),
-            onPressed: () {
-              context.goNamed(
-                'more_info',
-                params: {
-                  'info':
-                      'This is some sample information for the bookmarks screen',
-                },
-              );
-            },
-          )
-        ],
       ),
       body: Container(
         margin: const EdgeInsets.only(top: 9.0),
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: ListView.builder(
-            itemCount: 8,
+            itemCount: 2,
             itemBuilder: (context, index) {
               return ReusableCard(
                   cardChild: Row(

@@ -1,52 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mymobility_flutter/navigation/navigation.dart';
-import 'package:mymobility_flutter/screens/edit_profile_screen.dart';
-import 'package:mymobility_flutter/screens/more_info_screen.dart';
-import 'package:mymobility_flutter/screens/settings.dart';
-import 'package:mymobility_flutter/screens/splash_screen.dart';
 import 'package:mymobility_flutter/theme.dart';
-import 'package:go_router/go_router.dart';
-
-// GoRouter configuration
-final _router = GoRouter(
-  initialLocation: '/',
-  routes: [
-    GoRoute(
-      path: '/',
-      name: 'splash_screen',
-      builder: (context, state) => const SplashScreen(),
-    ),
-    GoRoute(
-        path: '/home',
-        name: 'home',
-        builder: (context, state) {
-          return const NavigationPage();
-        },
-        routes: [
-          GoRoute(
-              path: 'more_info/:info',
-              name: 'more_info',
-              builder: (context, state) {
-                return MoreInfo(
-                  info: state.params['info']!,
-                );
-              }),
-          GoRoute(
-              path: 'settings',
-              name: 'settings',
-              builder: (context, state) {
-                return const SettingsPage();
-              }),
-          GoRoute(
-              path: 'edit_profile',
-              name: 'edit_profile',
-              builder: (context, state) {
-                return const EditProfilePage();
-              }),
-        ]),
-  ],
-);
+import 'navigation/go_router_provider.dart';
 
 void main() => runApp(const ProviderScope(child: MyMobility()));
 
@@ -59,7 +14,7 @@ class MyMobility extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      routerConfig: _router,
+      routerConfig: router,
     );
   }
 }

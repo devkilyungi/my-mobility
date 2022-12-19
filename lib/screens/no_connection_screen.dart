@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NoConnection extends StatelessWidget {
-  const NoConnection({Key? key}) : super(key: key);
+  final String errorMsg;
+  const NoConnection({Key? key, required this.errorMsg}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +13,16 @@ class NoConnection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                'No Connection',
+                'Error',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 10.0),
-              const Text(
-                'Please check your internet connection and try again.',
-                style: TextStyle(
+              Text(
+                errorMsg,
+                style: const TextStyle(
                   fontSize: 14.0,
                 ),
               ),
