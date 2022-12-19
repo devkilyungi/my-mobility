@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mymobility_flutter/constants.dart';
 import 'package:mymobility_flutter/components/reusable_card.dart';
-import 'package:mymobility_flutter/screens/home_page.dart';
 
 class BookmarksScreen extends StatelessWidget {
   const BookmarksScreen({Key? key}) : super(key: key);

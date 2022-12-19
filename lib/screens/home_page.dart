@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mymobility_flutter/components/reusable_card.dart';
 import 'package:mymobility_flutter/constants.dart';
 
-import '../components/custom_search_delegate.dart';
-
 final now = DateTime.now();
 
 String determineGreeting() {
@@ -31,18 +29,6 @@ class _HomepageScreenState extends State<HomepageScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(determineGreeting()),
-          actions: [
-            IconButton(
-              onPressed: () {
-                // method to show the search bar
-                showSearch(
-                    context: context,
-                    // delegate to customize the search bar
-                    delegate: CustomSearchDelegate());
-              },
-              icon: const Icon(Icons.search),
-            )
-          ],
         ),
         body: Padding(
           padding: const EdgeInsets.all(kDefaultPadding),
