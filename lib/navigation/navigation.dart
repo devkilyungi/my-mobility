@@ -13,11 +13,15 @@ class NavigationPage extends ConsumerStatefulWidget {
 }
 
 class _NavigationPageState extends ConsumerState<NavigationPage> {
+  int position = 0;
   List<String> appBarTitles = [
     'Good Morning',
   ];
 
   Position? _currentPosition;
+
+  // late String latitude = _currentPosition!.latitude.toString();
+  // late String longitude = _currentPosition!.longitude.toString();
 
   Future<bool> _handleLocationPermission() async {
     bool serviceEnabled;
@@ -61,7 +65,10 @@ class _NavigationPageState extends ConsumerState<NavigationPage> {
   }
 
   void _onTap(int index) {
-    ref.read(dashboardControllerProvider.notifier).setPosition(index);
+    setState(() {
+      position = index;
+      print(_currentPosition);
+    });
 
     switch (index) {
       case 0:
@@ -82,7 +89,6 @@ class _NavigationPageState extends ConsumerState<NavigationPage> {
 
   @override
   Widget build(BuildContext context) {
-    final position = 0;
     _getCurrentPosition();
 
     return Scaffold(

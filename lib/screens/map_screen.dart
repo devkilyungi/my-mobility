@@ -78,7 +78,7 @@ class MapScreenState extends ConsumerState<MapScreen> {
 
   // initial map position on load
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(-1.286389, 36.817223),
+    target: LatLng(-1.2324334, 36.8837127),
     zoom: 14.4746,
   );
 
@@ -693,6 +693,17 @@ class MapScreenState extends ConsumerState<MapScreen> {
                                                 fontWeight: FontWeight.w400),
                                           ))
                                     ],
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      7.0, 0.0, 7.0, 0.0),
+                                  width: 175.0,
+                                  alignment: Alignment.center,
+                                  child: IconButton(
+                                    onPressed: () {},
+                                    color: kPrimaryColor,
+                                    icon: const Icon(Icons.bookmarks_outlined),
                                   ),
                                 ),
                               ]),

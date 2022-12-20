@@ -17,9 +17,14 @@ String determineGreeting() {
 }
 
 class HomepageScreen extends StatefulWidget {
-  const HomepageScreen({Key? key, this.currentPosition}) : super(key: key);
+  const HomepageScreen({
+    Key? key,
+    this.latitude,
+    this.longitude,
+  }) : super(key: key);
 
-  final Position? currentPosition;
+  final String? latitude;
+  final String? longitude;
 
   @override
   State<HomepageScreen> createState() => _HomepageScreenState();
@@ -29,14 +34,14 @@ class _HomepageScreenState extends State<HomepageScreen> {
   Widget buildSuggestionCards() {
     return Expanded(
       child: ListView.builder(
-          itemCount: 3,
+          itemCount: places.length,
           itemBuilder: (context, index) {
             return ReusableCard(
                 cardChild: Row(
                   children: [
-                    const Expanded(
+                    Expanded(
                       child: CircleAvatar(
-                        backgroundImage: NetworkImage(dummyUrl),
+                        backgroundImage: NetworkImage(images[index]),
                         minRadius: 28.0,
                       ),
                     ),
@@ -44,28 +49,29 @@ class _HomepageScreenState extends State<HomepageScreen> {
                       flex: 2,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
-                            'Place Name',
+                            places[index],
                             style: kPlaceNameStyle,
                           ),
-                          Text(
-                            'Description',
+                          const Text(
+                            'Short description',
                             style: kDescriptionStyle,
                           ),
                         ],
                       ),
                     ),
-                    const Expanded(
+                    Expanded(
                       child: Text(
-                        '2Km away',
+                        '${2 + index}Km away',
                         style: kDescriptionStyle,
                       ),
                     ),
                   ],
                 ),
                 onPress: () {
-                  print(widget.currentPosition);
+                  print(widget.latitude);
+                  print(widget.longitude);
                 });
           }),
     );
