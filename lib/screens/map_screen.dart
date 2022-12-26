@@ -57,7 +57,7 @@ class MapScreenState extends ConsumerState<MapScreen> {
   bool isReviews = true;
   bool isPhotos = false;
 
-  static const apiKey = 'AIzaSyAZz3258U9NLh4M8UFIhztPRRxR19y1miU';
+  static const apiKey = 'YOUR_KEY';
 
   var selectedPlaceDetails;
 
